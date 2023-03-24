@@ -1,0 +1,32 @@
+.board-wrapper {
+  margin: 0 auto;
+}
+
+.search-bar {
+  display: flex;
+  height: 44px;
+  background: #fff;
+  border: #fff;
+  box-shadow: none;
+  border-radius: 24px;
+  margin: 0 auto;
+  width: 100px;
+  max-width: 584px;
+  align-items: center;
+  box-shadow: 2px 2px 5px #888888;
+}
+
+.search-bar input {
+  font-family: 'Sunflower', sans-serif;
+  width: 55%;
+  height: 90%;
+  border: none;
+  outline: none;
+  margin-left: 23px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.result {
+  font-size: 25px;
+}

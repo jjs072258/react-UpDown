@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Board from './components/Board';
+import Info from './components/Info';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [answer, setAnswer] = useState(0);
+  const [history, setHistory] = useState([]);
+  const changeAnswer = (value) => {
+    setAnswer(value);
+  };
+  const addList = (list) => {
+    setHistory([...history, list]);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='name'>Up & Down Game</div>
+      <div className='board'>
+        <Board changeAnswer={changeAnswer} addList={addList}></Board>
+      </div>
+      <div className='info'>
+        <Info history={history}></Info>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
