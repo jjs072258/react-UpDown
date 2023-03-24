@@ -14,9 +14,9 @@ const App = () => {
   };
   return (
     <div className='App'>
-      <div className='name'>Up & Down Game</div>
+      <div className='name'>Up & Down Game(1~100)</div>
       <div className='board'>
-        <Board changeAnswer={changeAnswer} addList={addList}></Board>
+        <Board changeAnswer={changeAnswer} answer={answer} addList={addList}></Board>
       </div>
       <div className='info'>
         <Info history={history}></Info>
